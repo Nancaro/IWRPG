@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    padding: 10px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.logo {
+    width: 50px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: auto;
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.header-title {
+    color: #BD8200; /* Color del texto en amarillo */
+    font-size: 24px; /* Ajusta el tamaño del texto según tus necesidades */
+    font-weight: bold;
+}
+
+/* Estilos del carrusel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    height: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 40%;
+    flex: 0 0 100%;
+    filter: grayscale(20%) brightness(50%); /* Aplica gris y oscurece */
+    transition: filter 0.5s ease; /* Suaviza el efecto */
+}
+
+/* Contenido centrado en el carrusel */
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+      /* Sombra de texto para mejor contraste */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.explore-button {
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Indicadores del carrusel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #ffc107; /* Color activo */
+}
+
+/* Estilo para la nueva sección de aventuras */
+.adventures-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333; /* Color de fondo suave */
+}
+
+.adventures-section h2 {
+    font-size: 2rem;
+    color: #BD8200;
+    margin-bottom: 10px;
+}
+
+.adventure-subtitle {
+    font-size: 1.2rem;
+    color: #ffc107;
+    margin-bottom: 15px;
+    line-height: 1.6; /* Aumenta el espacio entre las líneas */
+}
+
+.adventures-section {
+    font-size: 1rem;
+    color: #fdfdfd;
+    margin: 0 auto;
+}
+
+.adventures-section p {
+    font-size: 1rem;
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #333;
+    line-height: 2.0; 
+}
+
+/* Estilos de la sección de servicios */
+.campaigns {
+    background-color: #3b3b3b;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.campaigns h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.campaigns p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #d3d3d3;
+    max-width: 900px; /* Limita el ancho máximo del contenedor para centrarlo */
+}
+
+/* Contenedor de tarjetas */
+.campaigns-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
+    gap: 20px;
+    justify-items: center; /* Centra las tarjetas en cada columna */
+    max-width: 900px; /* Limita el ancho máximo del contenedor para centrarlo */
+    width: 100%;
+}
+
+/* Estilos de cada tarjeta */
+.campaigns-card {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.campaigns-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen de la tarjeta */
+.campaigns-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Información de la tarjeta */
+.campaigns-info {
+    padding: 20px;
+}
+
+.campaigns-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.campaigns-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bdbdbd;
+}
+
+/* Botón de la tarjeta */
+.campaigns-info button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #BD8200;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.campaigns-info button:hover {
+    background-color: #ad7703;
+}
+
+.footer-content p {
+    font-size: 0.8em;
+}
+
+/* Estilos de la sección de footer */
+.footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+    color: #b0b0b0;
+}
+
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content .social-media a {
+    color: #f4f4f4;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-content .social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-content a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajuste del encabezado */
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 40px;
+        margin-bottom: 10px;
+    }
+
+    .header-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Ajuste del carrusel */
+    .carousel {
+        height: auto;
+    }
+
+    .carousel-content h2 {
+        font-size: 24px;
+    }
+
+    .carousel-content p {
+        font-size: 16px;
+    }
+
+    .explore-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Ajuste de la sección de aventuras */
+    .adventures-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .adventure-subtitle {
+        font-size: 1rem;
+    }
+
+    .adventures-section p {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    /* Ajuste de las campañas */
+    .campaigns-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .campaigns-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .campaigns-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .campaigns-info p {
+        font-size: 0.9rem;
+    }
+
+    .campaigns-info button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    /* Footer */
+    .footer-content {
+        text-align: center;
+    }
+
+    .social-media {
+        margin-bottom: 10px;
+    }
+}
